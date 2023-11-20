@@ -61,7 +61,7 @@ function install_fabric_bin {
     #TODO make version dynamic
     #check if bin exists, peer cli is the most important for now
     if [[ ! -f "bin/peer" ]];then
-        curl -sSL https://bit.ly/2ysbOFE | bash -s -- "${FAB_VERSION}" "${CA_VERSION}" -d -s
+        curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/master/scripts/bootstrap.sh | bash -s -- "${FAB_VERSION}" "${CA_VERSION}" -d -s
         chmod +x bin/configtxgen
         chmod +x bin/idemixgen
         chmod +x bin/configtxlator
